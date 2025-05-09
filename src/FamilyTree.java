@@ -1,8 +1,9 @@
 import java.util.HashMap;
+import java.util.ArrayList;
 
 public class FamilyTree {
     // Hash table for storing the tree
-    private HashMap<String, FamilyMember> tree;
+    private HashMap<String, FamilyMember> tree = new HashMap<>();
 
     // Basic Hash Table methods
 
@@ -20,4 +21,16 @@ public class FamilyTree {
     }
 
     // Your code here
+    public void printRelationship(String firstName, String secondName) {
+        System.out.println(tree); // check tree
+        FamilyMember first = tree.get(firstName);
+        if (first == null) {
+            System.out.printf("Name not found:%s%n", firstName);
+            return;
+        }
+        ArrayList<FamilyMember> firstAscent = first.lineOfAscent();
+        System.out.println(firstAscent); // check first line of ascent
+
+
+    }
 }

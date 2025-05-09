@@ -15,4 +15,7 @@ public class FamilyMember {
     }
 
     // Your code here
+    public ArrayList<FamilyMember> lineOfAscent() {
+
+    }
   }
